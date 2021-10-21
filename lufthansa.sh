@@ -4,40 +4,40 @@
 
 # very important global variable
 # is used as a trigger in many decisive situations
-private boolean yolo = false;
-fork_thread (update_yolo()); # runs a parallel thread. See function definition for more info
+private boolean YOLO = false;
+fork_thread (update_YOLO()); # runs a parallel thread. See function definition for more info
 
 # this function is run as a parallel thread and uses specific entries
 # from the array of all environment variables
-function update_yolo(args[]) 
+function update_YOLO(args[]) 
 {
     real gutFeeling = args[0]; # the intuition on a scale from 0 to 1
     real opportunity = args[1]; # external opportunity to develop on a scale from 0 to 1
     if (gutFeeling * opportunity = 1)
     {
-        yolo = true; # now it becomes interesting
+        YOLO = true; # now it becomes interesting
     }
 }
 
 # This is old code from 2002
 work (company="Lufthansa Cargo", role="EnterpriseArchitect");
-while (!ZUP) 
+while (!ZUP) # without "Zuverlässigkeitsprüfung" you are not allowed to work on-premise
 {
     go (Kelsterbach);
 }
-while (!yolo)
+while (!YOLO)
 {
     document mydoc;
     presentation myprez;
     create_RFP(internalProducts[Random(135)]);
-    mydoc = analyse_architecture(salesPaper);
+    mydoc = analyseArchitecture(salesPaper);
     myprez = convertToPrez(mydoc);
     CIOMeeting.present(myprez);
 }
 
 # This is code from 2005
 work (company="Lufthansa Passage", role1="ProjectManager", role2="LeadArchitect");
-wile(!projectBudget)
+wile(!projectBudget) # I started without a budget and I left without
 {
     document mydoc;
     presentation myprez;
@@ -48,15 +48,18 @@ wile(!projectBudget)
     improve(RFP);
     update(costcalculation);
 
-    weekly_management_update(myprez);
+    # the weekly status meeting took always place even if there 
+    # was nothing to report.
+    weeklyManagementUpdate(myprez);
     do
     {
         listen("manager");
-    } until (EOF);
+    } until (EOF); # some managers just have to talk
 
-    if (yolo)
+    # if there are dull perspectives the opportunity environment variable is checked more often
+    if (YOLO)
     {
-        break;
+        break; 
     }
 }
 
@@ -67,22 +70,66 @@ do
     collectAUB(); # AUB = Arbeitsunfähigkeitbescheinigung
     foreach (mitarbeiter)
     {
-        OneToOneTalk();
+        OneToOneTalk(); # at least once or better twice a year...
     }
-    checkSAP();
-    checkTroubleTickets();
-    checkEmail();
-    join("Emergency Meeting");
-} until (yolo);
+    join("Emergency Meeting"); # sometimes "prioritization" or "escalation"
+    hire("Business Specialists"); # We were hiring a LOT!
+    checkSAP(); # those messy IT-costs
+    checkOmniTrackerTickets(); 
+    checkLotusNotesMail();
+    rebootLaptop();
+} until (YOLO);
 
- # This whole part was encrypted like all the code that described the project Lido NG
+# This whole part was encrypted like all the code that described the project Lido NG
 changeRole("Development Manager");
 changeLocation("Lido NG Project Office");
 while(budget)
 {
-    develop("Greeting Card Application");
-    develop("Optimizer Refactoring");
-    watch("Bubble Charts");
-    communicate("Dell/Perot");
-    communicate("Gdansk Developers");
+    develop("Greeting Card Generator"); # That was the only thing that actually worked
+    develop("Optimizer Refactoring"); # ... and the optimizer (even on Linux)
+    watch("Bubble Charts"); # never forget...
+    communicate("Dell/Perot"); # 60 developers in India staring at generated Java classes
+    communicate("Gdansk Developers"); # 40 developers in Gdansk staring at generated Java classes
+    checkSAP(); # How to compensate the delay?
+    checkOutlookEmail();
 }
+
+# This part is from roughly 20010/11
+changeRole("Team Leader");
+changeLocation("Product Improvement Team"); # the remains of the Lido NG team
+do
+{
+    analyseArchitecture("WINDS"); # does this qualify as defense product?
+    integrateSoftware("WINDS");
+    agileDevelopment("WINDS"); # we successfully pulled Air France into this
+    agileDevelopment("Lido Presentation Layer"); # learned a lot from this
+    checkProcon(); # or ask Jochen and Frank
+    checkOutlookEmail();
+    checkTrackSpace();
+    restartSkype(); # Communication with still images
+    rebootLaptop(); # sometimes that helped
+} until (YOLO);
+
+# In 2013 this was added
+changeRole("Lead Architect"); # Got the T-Shirt
+do
+{
+    design("Lido 4D"); # together with a few smart brains
+    agileDevelopment("Microservices"); # nobody had done that before
+    build("Architecture Organisation"); # neither this
+    communicate("Customers");
+    communicate("Architecture Owners");
+    support("Internships"); # pupils, company students, a lot of smart people
+    agileDevelopment("Lido On Linux"); # with our backs to the wall
+    agileDevelopment("Lido On Kubernetes"); # with a little more foresight
+    checkOutlookEmail();
+    restartTeams();
+    checkSlack();
+    checkTrackSpace();
+    editProxySettings();
+    if (COVID)
+    {
+        changeLocation("Home Office");
+    }
+} until (YOLO);
+# Here the code ends. I hope I will be able to get an updated version soon.
