@@ -9,7 +9,8 @@ fork_thread (update_YOLO()); # runs a parallel thread. See function definition f
 
 # this function is run as a parallel thread and uses specific entries
 # from the array of all environment variables
-function update_YOLO(args[]) 
+# if the product of intuition and opportunity becomes 1 then YOLO becomes TRUE 
+function update_YOLO(real args[]) 
 {
     real gutFeeling = args[0]; # the intuition on a scale from 0 to 1
     real opportunity = args[1]; # external opportunity to develop on a scale from 0 to 1
@@ -23,14 +24,14 @@ function update_YOLO(args[])
 work (company="Lufthansa Cargo", role="EnterpriseArchitect");
 while (!ZUP) # without "Zuverlässigkeitsprüfung" you are not allowed to work on-premise
 {
-    go (Kelsterbach);
+    go (Kelsterbach); # nicer offices than in building 451 (LHCargo)
 }
 while (!YOLO)
 {
     document mydoc;
     presentation myprez;
-    create_RFP(internalProducts[Random(135)]);
-    mydoc = analyseArchitecture(salesPaper);
+    create_RFP(internalProducts[Random(135)]); # choose one from the architecture landscape
+    mydoc = analyseArchitecture(salesPaper); # didn't matter which, Cargo had them all
     myprez = convertToPrez(mydoc);
     CIOMeeting.present(myprez);
 }
@@ -91,7 +92,7 @@ while(budget)
     communicate("Dell/Perot"); # 60 developers in India staring at generated Java classes
     communicate("Gdansk Developers"); # 40 developers in Gdansk staring at generated Java classes
     checkSAP(); # How to compensate the delay?
-    checkOutlookEmail();
+    checkOutlookEmail(); # at least something changed to the good
 }
 
 # This part is from roughly 20010/11
@@ -110,6 +111,27 @@ do
     rebootLaptop(); # sometimes that helped
 } until (YOLO);
 
+# at around 2010 this function appeared in the code
+function agileDevelopment(string projectname)
+{
+    new AgileProject aProject(projectname);
+    include(smartTeam[]); # Lucky me
+    include("Magda"); # Nothing works without that resource
+
+    # that's how simple it actually is
+    # times are minimum times only reachable with resource "Magda" assigned
+    int sprintDuration = 2; # duration in weeks
+    do
+    {
+        planSprint(hours = sprintDuration);
+        executeDaily(hours = 0.25);
+        refineBacklog(hours = sprintDuration);
+        reviewSprint(hours = sprintDuration);
+        retrospective(hours = 1);
+        fightWaterfallProjectManagers(hours = 24 * 7); # that's a full-time job
+    } until (backlog.length() < 100); # you never empty the backlog, never ever
+}
+
 # In 2013 this was added
 changeRole("Lead Architect"); # Got the T-Shirt
 do
@@ -117,18 +139,24 @@ do
     design("Lido 4D"); # together with a few smart brains
     agileDevelopment("Microservices"); # nobody had done that before
     build("Architecture Organisation"); # neither this
+    build("Architecture Governance"); # one to rule them all ...
     communicate("Customers");
     communicate("Architecture Owners");
     support("Internships"); # pupils, company students, a lot of smart people
     agileDevelopment("Lido On Linux"); # with our backs to the wall
+    agileDevelopment("Lido API Gateway"); # you don't know it but you'll need it
     agileDevelopment("Lido On Kubernetes"); # with a little more foresight
+    agileDevelopment("Documentation As Code"); # TODO: distribute English dictionary
+
+    # the tools section seems to get longer every year
     checkOutlookEmail();
     restartTeams();
     checkSlack();
     checkTrackSpace();
     editProxySettings();
-    if (COVID)
+    if (COVID) # first treated by exception handling but now part of the code
     {
+        workShortTime(getCurrentPercentage());
         changeLocation("Home Office");
     }
 } until (YOLO);
