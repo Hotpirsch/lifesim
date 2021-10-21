@@ -81,7 +81,7 @@ do
     rebootLaptop();
 } until (YOLO);
 
-# This whole part was encrypted like all the code that described the project Lido NG
+# This whole part was encrypted like all the code that describes the project Lido NG
 changeRole("Development Manager");
 changeLocation("Lido NG Project Office");
 while(budget)
@@ -127,7 +127,7 @@ function agileDevelopment(string projectname)
         executeDaily(hours = 0.25);
         refineBacklog(hours = sprintDuration);
         reviewSprint(hours = sprintDuration);
-        retrospective(hours = 1);
+        retrospective(hours = 0.5);
         fightWaterfallProjectManagers(hours = 24 * 7); # that's a full-time job
     } until (backlog.length() < 100); # you never empty the backlog, never ever
 }
@@ -140,7 +140,7 @@ do
     agileDevelopment("Microservices"); # nobody had done that before
     build("Architecture Organisation"); # neither this
     build("Architecture Governance"); # one to rule them all ...
-    communicate("Customers");
+    communicate("Customers"); # Ooops... who pays the bill?
     communicate("Architecture Owners");
     support("Internships"); # pupils, company students, a lot of smart people
     agileDevelopment("Lido On Linux"); # with our backs to the wall
