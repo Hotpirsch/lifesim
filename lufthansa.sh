@@ -5,12 +5,13 @@
 # very important global variable
 # is used as a trigger in many decisive situations
 private boolean YOLO = false;
-fork_thread (update_YOLO()); # runs a parallel thread. See function definition for more info
+forkThread (updateYOLO()); # runs a parallel thread. See function definition for more info
+forkThread (changeABTKRZ()); # there seems to be a rule behind the regular change of department names
 
 # this function is run as a parallel thread and uses specific entries
 # from the array of all environment variables
 # if the product of intuition and opportunity becomes 1 then YOLO becomes TRUE 
-function update_YOLO(real args[]) 
+function updateYOLO(real args[]) 
 {
     real gutFeeling = args[0]; # the intuition on a scale from 0 to 1
     real opportunity = args[1]; # external opportunity to develop on a scale from 0 to 1
@@ -24,7 +25,7 @@ function update_YOLO(real args[])
 work (company="Lufthansa Cargo", role="EnterpriseArchitect");
 while (!ZUP) # without "Zuverlässigkeitsprüfung" you are not allowed to work on-premise
 {
-    go (Kelsterbach); # nicer offices than in building 451 (LHCargo)
+    changeLocation ("Kelsterbach LSY Office"); # nicer offices than in building 451 (LHCargo)
 }
 while (!YOLO)
 {
@@ -115,18 +116,20 @@ do
 function agileDevelopment(string projectname)
 {
     new AgileProject aProject(projectname);
-    include(smartTeam[]); # Lucky me
+    include(smartTeam[]); # Lucky me. I always found them
     include("Magda"); # Nothing works without that resource
+    self.addRole("Product Owner");
 
     # that's how simple it actually is
     # times are minimum times only reachable with resource "Magda" assigned
-    int sprintDuration = 2; # duration in weeks
+    int scrumFactor = 2; # duration in weeks
+    initSCRUM(smartTeam[], "Magda", weeks = scrumFactor);
     do
     {
-        planSprint(hours = sprintDuration);
+        planSprint(hours = scrumFactor);
         executeDaily(hours = 0.25);
-        refineBacklog(hours = sprintDuration);
-        reviewSprint(hours = sprintDuration);
+        refineBacklog(hours = scrumFactor);
+        reviewSprint(hours = scrumFactor);
         retrospective(hours = 0.5);
         fightWaterfallProjectManagers(hours = 24 * 7); # that's a full-time job
     } until (backlog.length() < 100); # you never empty the backlog, never ever
@@ -142,7 +145,8 @@ do
     build("Architecture Governance"); # one to rule them all ...
     communicate("Customers"); # Ooops... who pays the bill?
     communicate("Architecture Owners");
-    support("Internships"); # pupils, company students, a lot of smart people
+    hire("Architect");
+    support("Internships"); # pupils, dual students, a lot of smart people
     agileDevelopment("Lido On Linux"); # with our backs to the wall
     agileDevelopment("Lido API Gateway"); # you don't know it but you'll need it
     agileDevelopment("Lido On Kubernetes"); # with a little more foresight
@@ -154,6 +158,7 @@ do
     checkSlack();
     checkTrackSpace();
     editProxySettings();
+    changeABTKRZ();
     if (COVID) # first treated by exception handling but now part of the code
     {
         workShortTime(getCurrentPercentage());
