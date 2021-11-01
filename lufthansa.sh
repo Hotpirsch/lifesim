@@ -35,6 +35,7 @@ while (!YOLO)
     mydoc = analyseArchitecture(salesPaper); # didn't matter which, Cargo had them all
     myprez = convertToPrez(mydoc);
     CIOMeeting.present(myprez);
+    learn("Certified Project Manager"); # Good old waterfall
 }
 
 # This is code from 2005
@@ -80,6 +81,7 @@ do
     checkOmniTrackerTickets(); 
     checkLotusNotesMail();
     rebootLaptop();
+    learn("Certified Team Manager"); # We are LEAD
 } until (YOLO);
 
 # This whole part was encrypted like all the code that describes the project Lido NG
@@ -110,6 +112,7 @@ do
     checkTrackSpace();
     restartSkype(); # Communication with still images
     rebootLaptop(); # sometimes that helped
+    learn("In-Memory-DB"); # If Tesla would build a database
 } until (YOLO);
 
 # at around 2010 this function appeared in the code
@@ -151,6 +154,8 @@ do
     agileDevelopment("Lido API Gateway"); # you don't know it but you'll need it
     agileDevelopment("Lido On Kubernetes"); # with a little more foresight
     agileDevelopment("Documentation As Code"); # TODO: distribute English dictionary
+    learn("Big Data Analytics"); # Sorry, Lido has no pandas
+    learn("O'Reilly Platform"); # Get to meet "Uncle Bob"
 
     # the tools section seems to get longer every year
     checkOutlookEmail();
