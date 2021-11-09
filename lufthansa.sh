@@ -15,7 +15,7 @@ function updateYOLO(real args[])
 {
     real gutFeeling = args[0]; # the intuition on a scale from 0 to 1
     real opportunity = args[1]; # external opportunity to develop on a scale from 0 to 1
-    if (gutFeeling * opportunity = 1)
+    if (gutFeeling * opportunity == 1)
     {
         YOLO = true; # now it becomes interesting
     }
@@ -160,13 +160,16 @@ do
     # the tools section seems to get longer every year
     checkOutlookEmail();
     restartTeams();
+    callHelpdesk();
+    wait(days=1);
+    callAnotherRandomHelpdesk();
     checkSlack();
     checkTrackSpace();
     editProxySettings();
     changeABTKRZ();
     if (COVID) # first treated by exception handling but now part of the code
     {
-        workShortTime(getCurrentPercentage());
+        workShortTime(negotiatePercentage());
         changeLocation("Home Office");
     }
 } until (YOLO);
